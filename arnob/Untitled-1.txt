@@ -1,0 +1,19 @@
+close all
+clear all 
+clc
+%%
+%f = @(n) (n>=0).*n;
+%%
+indx = -30:30;
+%sig = f(-indx-5);
+%figure; stem(indx,sig);
+
+%%
+f = @(n) 2*(n>=0 & n<=2) + (n>=3 & n<=6).*(n-2);
+%sig = f(-indx-5);
+%stem(indx,sig);
+
+%%
+f = @(n) n.*(n>0 & n<=2) + (n>=3 & n<=6).*(6-n);
+sig = f(-indx-5);
+stem(indx,sig);

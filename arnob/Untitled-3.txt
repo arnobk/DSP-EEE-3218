@@ -1,0 +1,17 @@
+%%
+clc
+close all
+clear all
+
+%%
+f = @(n) n.*(n>=0);
+
+%%
+indx = -15:27;
+sig = f(indx);
+
+indxNew = -fliplr(indx);
+sigFlip = fliplr(sig);
+
+
+stem(indxNew,sigFlip),axis tight;
